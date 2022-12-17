@@ -2,12 +2,10 @@ import os
 import shutil as sh
 import git
 from datamanager import DataManager
-from collections.abc import Iterable
-from models import XGBoostWrapper, LightGBMWrapper, CatBoostWrapper
 from sklearn_models import LogisticRegressionWrapper, DecisionTreeClassifierWrapper, KNeighborsClassifierWrapper, LinearDiscriminantAnalysisWrapper, GaussianNBWrapper, SVCWrapper
 
 class Main:
-    repo_name              = 'eeg_cnn'
+    repo_name              = 'eeg_dataset'
     unpacked_files_folder  = 'unpacked'
     samples_folder         = 'samples'
     converted_files_folder = 'converted'
@@ -19,7 +17,7 @@ class Main:
 
     @staticmethod
     def download():
-        git.Git().clone('https://github.com/tzorake/eeg_cnn.git')
+        git.Git().clone('https://github.com/mwoper/eeg_dataset.git')
 
 
     @staticmethod
